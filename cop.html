@@ -1,0 +1,1076 @@
+
+ {<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightingale International Secondary School | Kupondole, Lalitpur</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                       
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(15, 23, 42, 0.9) 100%);
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Top Info Bar -->
+    <div class="bg-navy-900 text-gray-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-700">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold-400"></i> Kupondole, Lalitpur, Nepal</span>
+                <span class="hidden sm:inline-flex items-center gap-1.5"><i class="fa-solid fa-phone text-gold-400"></i> +977 01-5523456 / Block-D: 01-5451791</span>
+                <span class="hidden md:inline-flex items-center gap-1.5"><i class="fa-solid fa-envelope text-gold-400"></i> info@nightingale.edu.np</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-3 text-gray-300">
+                    <a href="#" class="hover:text-gold-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-gold-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gold-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="h-4 w-px bg-slate-700"></div>
+                <button onclick="openModal('portalModal')" class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-3 py-1 rounded text-xs transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-user-lock"></i> Student/Parent Portal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & School Title -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="bg-navy-900 text-gold-400 p-2.5 rounded-full border-2 border-gold-400 shadow flex items-center justify-center w-12 h-12 font-bold text-xl">
+                       NISS 
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-extrabold text-navy-900 leading-tight block tracking-tight">NIGHTINGALE</span>
+                        <span class="text-xs sm:text-sm font-semibold text-gray-600 tracking-wider block">Int'l Secondary School</span>
+                        <span class="text-[10px] text-gold-600 font-medium hidden sm:block italic">"labore et honere
+                    "</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-gray-700">
+                    <a href="#home" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Home</a>
+                    <a href="#about" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">About Us</a>
+                    <a href="#blocks" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">School Blocks</a>
+                    <a href="#academics" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Academics</a>
+                    <a href="#facilities" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Facilities</a>
+                    <a href="#notices" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Notices</a>
+                    <a href="#gallery" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Gallery</a>
+                    <a href="#contact" class="hover:text-navy-600 transition-colors py-2 border-b-2 border-transparent hover:border-gold-500">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="#admissions" class="bg-navy-900 hover:bg-navy-800 text-white font-semibold px-4 py-2.5 rounded-lg text-sm shadow hover:shadow-lg transition-all flex items-center gap-2 border border-navy-800">
+                        <i class="fa-solid fa-graduation-cap text-gold-400"></i> Apply Online
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-navy-900 focus:outline-none p-2" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">About Us</a>
+            <a href="#blocks" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">School Blocks</a>
+            <a href="#academics" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">Academics</a>
+            <a href="#facilities" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">Facilities</a>
+            <a href="#notices" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">Notices & Events</a>
+            <a href="#gallery" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">Gallery</a>
+            <a href="#contact" class="block py-2 text-gray-700 font-medium hover:text-navy-600 border-b border-gray-100">Contact</a>
+            <a href="#admissions" class="block w-full text-center bg-navy-900 text-white font-semibold py-2.5 rounded-lg mt-3">Apply for Admissions</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <section id="home" class="relative hero-bg min-h-[550px] lg:min-h-[620px] flex items-center justify-center text-white">
+            <div class="absolute inset-0 gradient-overlay"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
+                <span class="inline-block bg-gold-500/20 text-gold-400 border border-gold-400/40 font-semibold px-4 py-1.5 rounded-full text-sm mb-4 tracking-wide backdrop-blur-sm">
+                    Empowering Minds Since 1992
+                </span>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+                    Shaping Visionary Leaders Through Academic Excellence
+                </h1>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                    Nightingale International Secondary School, located in Kupondole, Lalitpur, offers world-class education across specialized blocks from Pre-Primary to +2 Science, Management, & Humanities.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#admissions" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold px-8 py-3.5 rounded-lg text-base shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Apply for Admission 2026-27
+                    </a>
+                    <button onclick="openModal('prospectusModal')" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/30 px-6 py-3.5 rounded-lg text-base backdrop-blur-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-gold-400"></i> Download Prospectus
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Alert Ticker -->
+        <div class="bg-gold-500 text-navy-900 font-medium py-2.5 px-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-sm">
+                <div class="flex items-center gap-2 font-bold shrink-0">
+                    <span class="bg-navy-900 text-white px-2.5 py-0.5 rounded text-xs uppercase tracking-wider">Latest News</span>
+                    <i class="fa-solid fa-bell animate-bounce"></i>
+                </div>
+                <p class="truncate text-center md:text-left">
+                    Admissions Open for Block-D (Grades 7-10) & +2 Programs! Contact Block-D Desk: 01-5451791.
+                </p>
+                <a href="#notices" class="text-xs font-bold underline hover:text-navy-800 shrink-0">View All Notices &rarr;</a>
+            </div>
+        </div>
+
+        <!-- School Overview & Principal's Message -->
+        <section id="about" class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-2 text-gold-600 font-bold uppercase text-xs tracking-wider mb-2">
+                            <span class="h-0.5 w-6 bg-gold-500"></span> Welcome to Nightingale
+                        </div>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mb-6">
+                            Nurturing Innovation, Integrity, and Academic Superiority
+                        </h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Established in the heart of Kupondole, Lalitpur, <strong>Nightingale International Secondary School</strong> has stood as a beacon of academic excellence for over three decades. We foster an environment where students acquire both intellectual rigor and personal values necessary for globally recognized achievement.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Our structured school blocks—from primary learning modules to dedicated secondary wings like Block-D—ensure personalized care, safety, and focused mentorship for every stage of student development.
+                        </p>
+
+                        <!-- Core Values Cards -->
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="p-4 bg-navy-50 rounded-lg border-l-4 border-navy-600">
+                                <h4 class="font-bold text-navy-900 mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-award text-gold-500"></i> Quality Education
+                                </h4>
+                                <p class="text-xs text-gray-600">Consistently top-ranked national results in SEE and +2 board examinations.</p>
+                            </div>
+                            <div class="p-4 bg-navy-50 rounded-lg border-l-4 border-gold-500">
+                                <h4 class="font-bold text-navy-900 mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-brain text-navy-600"></i> Holistic Growth
+                                </h4>
+                                <p class="text-xs text-gray-600">Emphasis on sports, arts, leadership, and community service integration.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Principal Card -->
+                    <div class="relative">
+                        <div class="bg-navy-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+                            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-gold-500/10 pointer-events-none"></div>
+                            
+                            <div class="flex items-center gap-4 mb-6">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Principal" class="w-20 h-20 rounded-full object-cover border-2 border-gold-400">
+                                <div>
+                                    <h3 class="text-xl font-bold text-black">Message from the Principal</h3>
+                                    <p class="text-x1 font-bold text-black">Nightingale Int'l Secondary School</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-x1 font-italic text-black"> "At Nightingale, education goes beyond textbooks. Through distinct administrative blocks like Block-D, we empower young minds to think critically, act ethically, and dream ambitiously."
+                            </p>
+
+                            <div class="border-t border-slate-700 pt-4 flex justify-between items-center text-xs text-gray-400">
+                                <span>Kupondole, Lalitpur, Nepal</span>
+                                <span class="font-semibold text-gold-400">Kupondole Campus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="bg-navy-900 text-white py-12 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <div class="text-3xl sm:text-5xl font-extrabold text-gold-400 mb-2">30+</div>
+                        <div class="text-xs sm:text-sm text-gray-300 font-medium uppercase tracking-wider">Years of Academic Excellence</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl sm:text-5xl font-extrabold text-gold-400 mb-2">2,500+</div>
+                        <div class="text-xs sm:text-sm text-gray-300 font-medium uppercase tracking-wider">Enrolled Students</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl sm:text-5xl font-extrabold text-gold-400 mb-2">100+</div>
+                        <div class="text-xs sm:text-sm text-gray-300 font-medium uppercase tracking-wider">Qualified Faculty</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl sm:text-5xl font-extrabold text-gold-400 mb-2">100%</div>
+                        <div class="text-xs sm:text-sm text-gray-300 font-medium uppercase tracking-wider">Board Pass Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHOOL BLOCKS SECTION (Featuring Block-D) -->
+        <section id="blocks" class="py-16 sm:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-gold-600 font-bold uppercase text-xs tracking-wider">Administrative Wings</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-1">School Blocks & Leadership</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base">Nightingale is divided into dedicated functional blocks for focused academic and administrative excellence.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Featured Block D -->
+                    <div class="lg:col-span-2 bg-white rounded-2xl shadow-md border-2 border-gold-400 p-6 sm:p-8 relative overflow-hidden">
+                        <span class="absolute top-4 right-4 bg-gold-500 text-navy-900 font-extrabold text-xs px-3 py-1 rounded-full uppercase">Featured Wing</span>
+                        
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-navy-900 text-gold-400 rounded-xl flex items-center justify-center text-xl font-bold">
+                                D
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-navy-900">Block-D (Classes 7 - 10)</h3>
+                                <p class="text-xs text-gray-500 font-semibold">Middle & Secondary Level Wing | Contact: <a href="tel:015451791" class="text-navy-600 hover:underline">01-5451791</a></p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                            Block-D caters to students in Grade 7 through Grade 10 (SEE preparation). It emphasizes academic brilliance alongside a vibrant culture of sports, arts, music, and debates, ensuring holistic growth and leadership readiness.
+                        </p>
+
+                        <h4 class="font-bold text-navy-900 text-sm mb-3 uppercase tracking-wider border-b pb-2 border-gray-100">Block Leadership & Staff</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                            <div class="p-3 bg-navy-50 rounded-lg">
+                                <span class="text-[10px] uppercase font-bold text-gray-500 block">Grade 7 Senior In-Charge</span>
+                                <span class="font-bold text-navy-900 text-sm"><i class="fa-solid fa-user-tie text-gold-500 mr-1"></i> Amandeep Kaur</span>
+                            </div>
+                            <div class="p-3 bg-navy-50 rounded-lg">
+                                <span class="text-[10px] uppercase font-bold text-gray-500 block">Grade 8 Senior In-Charge</span>
+                                <span class="font-bold text-navy-900 text-sm"><i class="fa-solid fa-user-tie text-gold-500 mr-1"></i> Meena Ale</span>
+                            </div>
+                            <div class="p-3 bg-navy-50 rounded-lg">
+                                <span class="text-[10px] uppercase font-bold text-gray-500 block">Grade 9 Supervisor</span>
+                                <span class="font-bold text-navy-900 text-sm"><i class="fa-solid fa-user-check text-navy-600 mr-1"></i> Deepa Thapa</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">SEE Coaching</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">Science Practical Labs</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">Extracurricular Clubs</span>
+                        </div>
+                    </div>
+
+                    <!-- Other Blocks Sidebar -->
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-navy-900 text-base mb-1">Block-A (Pre-Primary & Kindergarten)</h4>
+                            <p class="text-xs text-gray-500 mb-2">Montessori wings with dedicated safe play zones and nurturing facilitators.</p>
+                            <span class="text-[11px] font-semibold text-gold-600">Contact: Primary Office Desk</span>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-navy-900 text-base mb-1">Block-B & C (Primary Level 1-6)</h4>
+                            <p class="text-xs text-gray-500 mb-2">Structured classrooms, computer labs, and foundation learning blocks.</p>
+                            <span class="text-[11px] font-semibold text-gold-600">Contact: Admin Main Desk</span>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h4 class="font-bold text-navy-900 text-base mb-1">Block-E (+2 Higher Secondary Wing)</h4>
+                            <p class="text-xs text-gray-500 mb-2">Science, Management & Humanities classrooms, moot courts, and labs.</p>
+                            <span class="text-[11px] font-semibold text-gold-600">Contact: +2 Block Desk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academics & Academic Programs -->
+        <section id="academics" class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-gold-600 font-bold uppercase text-xs tracking-wider">Academic Excellence</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-1">Our Educational Programs</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base">Comprehensive learning tracks designed to foster creativity, intellectual curiosity, and practical skills at every stage.</p>
+                </div>
+
+                <!-- Interactive Tab Navigation -->
+                <div class="flex justify-center mb-8 overflow-x-auto pb-2">
+                    <div class="bg-gray-100 p-1.5 rounded-xl shadow-inner inline-flex gap-1">
+                        <button onclick="switchTab('tab-pre')" id="btn-tab-pre" class="tab-btn active px-4 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all bg-navy-900 text-white shadow">Pre-Primary Level</button>
+                        <button onclick="switchTab('tab-primary')" id="btn-tab-primary" class="tab-btn px-4 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all text-gray-600 hover:text-navy-900">Basic Level (1-6)</button>
+                        <button onclick="switchTab('tab-secondary')" id="btn-tab-secondary" class="tab-btn px-4 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all text-gray-600 hover:text-navy-900">Block-D (Grades 7-10)</button>
+                        <button onclick="switchTab('tab-plus2')" id="btn-tab-plus2" class="tab-btn px-4 py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all text-gray-600 hover:text-navy-900">+2 Programs (11-12)</button>
+                    </div>
+                </div>
+
+                <!-- Tab Panels -->
+                <div id="tab-pre" class="tab-content bg-navy-50 p-6 sm:p-8 rounded-2xl border border-navy-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <span class="text-xs font-bold text-gold-600 bg-gold-50 px-3 py-1 rounded-full uppercase">Kindergarten & Montessori</span>
+                            <h3 class="text-2xl font-bold text-navy-900 mt-3 mb-4">Nurturing Early Curiosity & Play-Based Learning</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                                Our Pre-Primary wing focuses on child-centered Montessori methodologies. We provide a safe, colorful, and engaging environment that stimulates sensory development, social skills, foundational literacy, and numeracy.
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-700 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Interactive play-based curriculum</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Safe, child-friendly indoor and outdoor play spaces</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Dedicated & caring Montessori-trained teachers</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop" alt="Pre-Primary" class="rounded-xl shadow object-cover h-64 w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-primary" class="tab-content hidden bg-navy-50 p-6 sm:p-8 rounded-2xl border border-navy-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <span class="text-xs font-bold text-gold-600 bg-gold-50 px-3 py-1 rounded-full uppercase">Grade 1 to 6</span>
+                            <h3 class="text-2xl font-bold text-navy-900 mt-3 mb-4">Strong Foundation in Science, Arts & Values</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                                The basic level builds critical thinking, mathematical reasoning, and language proficiency in both English and Nepali. Hands-on projects, STEM activities, and co-curricular programs complement core learning.
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-700 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Integrated STEM & computer education</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Language proficiency in English and Nepali</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Regular field trips, sports & arts activities</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" alt="Basic Level" class="rounded-xl shadow object-cover h-64 w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-secondary" class="tab-content hidden bg-navy-50 p-6 sm:p-8 rounded-2xl border border-navy-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <span class="text-xs font-bold text-gold-600 bg-gold-50 px-3 py-1 rounded-full uppercase">Block-D: Grade 7 to 10 (SEE Preparation)</span>
+                            <h3 class="text-2xl font-bold text-navy-900 mt-3 mb-4">Academic Precision & SEE Board Exam Excellence</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                                Managed under Block-D in Kupondole with dedicated leadership (Meena Ale - Grade 7, Deepa Thapa - Grade 8, Varsha Agrawal - Grade 9). Intensive academic support, regular mock assessments, science labs, and leadership clubs.
+                            </p>
+                            <ul class="space-y-2 text-sm text-gray-700 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Special SEE preparation & mock examinations</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Advanced science & computer lab sessions</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-500"></i> Leadership development, debate & sports clubs</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" alt="Secondary Level" class="rounded-xl shadow object-cover h-64 w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-plus2" class="tab-content hidden bg-navy-50 p-6 sm:p-8 rounded-2xl border border-navy-100">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Science Stream -->
+                        <div class="p-5 rounded-xl bg-white border border-gray-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center font-bold mb-3">
+                                <i class="fa-solid fa-flask"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-navy-900 mb-2">+2 Science</h4>
+                            <p class="text-xs text-gray-600 mb-4">Physics, Chemistry, Biology, Mathematics, Computer Science tailored for Engineering & Medical aspirations.</p>
+                            <span class="text-xs font-semibold text-navy-600">Morning & Day Shifts Available</span>
+                        </div>
+                        <!-- Management Stream -->
+                        <div class="p-5 rounded-xl bg-white border border-gray-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500 text-navy-900 flex items-center justify-center font-bold mb-3">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-navy-900 mb-2">+2 Management</h4>
+                            <p class="text-xs text-gray-600 mb-4">Accountancy, Economics, Business Studies, Computer Science, and Hotel Management with practical exposure.</p>
+                            <span class="text-xs font-semibold text-gold-700">Entrepreneurship Focus</span>
+                        </div>
+                        <!-- Humanities / Law -->
+                        <div class="p-5 rounded-xl bg-white border border-gray-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-lg bg-slate-700 text-white flex items-center justify-center font-bold mb-3">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-navy-900 mb-2">+2 Humanities & Law</h4>
+                            <p class="text-xs text-gray-600 mb-4">Sociology, Mass Communication, English, Political Science, and Legal Studies for future legal/arts professionals.</p>
+                            <span class="text-xs font-semibold text-slate-700">Moot Court & Seminars</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Facilities & Campus Infrastructure -->
+        <section id="facilities" class="py-16 sm:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-gold-600 font-bold uppercase text-xs tracking-wider">Campus Life</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-1">World-Class Facilities</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base">We provide modern infrastructure to facilitate interactive learning and athletic excellence.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Facility 1 -->
+                    <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow bg-white">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop" alt="Science Labs" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-navy-900 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-microscope text-gold-500"></i> Science Laboratories
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">Fully equipped Physics, Chemistry, and Biology labs enabling practical experiments under expert guidance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 2 -->
+                    <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow bg-white">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop" alt="Computer Lab" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-navy-900 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-laptop-code text-navy-600"></i> High-Tech Computer Lab
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">High-speed internet access, individual work stations, and modern software for IT education and coding.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 3 -->
+                    <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow bg-white">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=600&auto=format&fit=crop" alt="Library" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-navy-900 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-book text-gold-500"></i> Resource Library
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">Thousands of books, reference manuals, international journals, and quiet reading zones for students.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 4 -->
+                    <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow bg-white">
+                        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=600&auto=format&fit=crop" alt="Sports Court" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-navy-900 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-basketball text-navy-600"></i> Sports & Basketball Court
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">Dedicated basketball courts, futsal facility access, table tennis, and outdoor athletic training grounds.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 5 -->
+                    <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow bg-white">
+                        <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=600&auto=format&fit=crop" alt="Transportation" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-navy-900 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-bus text-gold-500"></i> Bus Transportation
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">Safe and punctual school bus services covering major routes in Lalitpur, Kathmandu, and Bhaktapur.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 6 -->
+                    <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow bg-white">
+                        <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=600&auto=format&fit=crop" alt="Cafeteria" class="h-48 w-full object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg text-navy-900 mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-utensils text-navy-600"></i> Hygienic Cafeteria
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed">Clean, spacious dining facility providing nutritious, freshly prepared meals and snacks daily.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News, Events & Notice Board -->
+        <section id="notices" class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    
+                    <!-- Notice Board -->
+                    <div class="bg-navy-50 p-6 rounded-2xl shadow-sm border border-navy-100">
+                        <div class="flex items-center justify-between mb-6 pb-3 border-b border-navy-200">
+                            <h3 class="text-xl font-bold text-navy-900 flex items-center gap-2">
+                                <i class="fa-solid fa-clipboard-list text-gold-500"></i> Official Notice Board
+                            </h3>
+                            <span class="text-xs font-semibold text-navy-600 hover:underline cursor-pointer">View All</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Notice Item 1 -->
+                            <div class="p-3.5 rounded-lg bg-white hover:bg-gold-50 transition-colors border-l-4 border-gold-500 flex items-start gap-4 shadow-sm">
+                                <div class="bg-gold-500 text-navy-900 text-center rounded px-2.5 py-1 shrink-0 font-bold text-xs">
+                                    <span>OCT</span>
+                                    <span class="block text-base leading-none">28</span>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-bold text-gold-600 uppercase">Block-D Notice</span>
+                                    <h4 class="text-sm font-bold text-navy-900 hover:text-navy-600 cursor-pointer">Grade 7 to 10 Assessment Schedule Released</h4>
+                                    <p class="text-xs text-gray-500 mt-1">Contact Senior In-Charge Meena Ale / Deepa Thapa or Supervisor Varsha Agrawal for details.</p>
+                                </div>
+                            </div>
+
+                            <!-- Notice Item 2 -->
+                            <div class="p-3.5 rounded-lg bg-white hover:bg-gold-50 transition-colors border-l-4 border-navy-600 flex items-start gap-4 shadow-sm">
+                                <div class="bg-navy-900 text-white text-center rounded px-2.5 py-1 shrink-0 font-bold text-xs">
+                                    <span>NOV</span>
+                                    <span class="block text-base leading-none">05</span>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-bold text-navy-600 uppercase">Academic Calendar</span>
+                                    <h4 class="text-sm font-bold text-navy-900 hover:text-navy-600 cursor-pointer">+2 Entrance Exam & Scholarship Test Date</h4>
+                                    <p class="text-xs text-gray-500 mt-1">Entrance exam for Science, Management, and Law stream candidates.</p>
+                                </div>
+                            </div>
+
+                            <!-- Notice Item 3 -->
+                            <div class="p-3.5 rounded-lg bg-white hover:bg-gold-50 transition-colors border-l-4 border-slate-400 flex items-start gap-4 shadow-sm">
+                                <div class="bg-slate-700 text-white text-center rounded px-2.5 py-1 shrink-0 font-bold text-xs">
+                                    <span>NOV</span>
+                                    <span class="block text-base leading-none">12</span>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-bold text-slate-600 uppercase">Parent Meeting</span>
+                                    <h4 class="text-sm font-bold text-navy-900 hover:text-navy-600 cursor-pointer">Block-D Parent-Teacher Conference</h4>
+                                    <p class="text-xs text-gray-500 mt-1">Parents of Grade 7-10 students are requested to visit Block-D office.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Events -->
+                    <div class="bg-navy-50 p-6 rounded-2xl shadow-sm border border-navy-100">
+                        <div class="flex items-center justify-between mb-6 pb-3 border-b border-navy-200">
+                            <h3 class="text-xl font-bold text-navy-900 flex items-center gap-2">
+                                <i class="fa-solid fa-calendar-days text-navy-600"></i> Upcoming Events
+                            </h3>
+                            <span class="text-xs font-semibold text-navy-600 hover:underline cursor-pointer">Full Calendar</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Event 1 -->
+                            <div class="flex items-center justify-between p-3.5 rounded-lg bg-white border border-gray-100 hover:border-gold-300 transition-colors shadow-sm">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-gold-100 text-gold-700 flex items-center justify-center font-bold text-sm">
+                                        <i class="fa-solid fa-trophy"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-navy-900">Inter-Block Sports Meet</h4>
+                                        <p class="text-xs text-gray-500"><i class="fa-solid fa-clock"></i> 9:00 AM | School Basketball Ground</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs bg-gold-500/10 text-gold-700 px-2.5 py-1 rounded-full font-bold">Nov 18</span>
+                            </div>
+
+                            <!-- Event 2 -->
+                            <div class="flex items-center justify-between p-3.5 rounded-lg bg-white border border-gray-100 hover:border-navy-300 transition-colors shadow-sm">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-navy-100 text-navy-700 flex items-center justify-center font-bold text-sm">
+                                        <i class="fa-solid fa-flask"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-navy-900">Science & Robotics Exhibition</h4>
+                                        <p class="text-xs text-gray-500"><i class="fa-solid fa-clock"></i> 10:00 AM | Block-D ground</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs bg-navy-500/10 text-navy-700 px-2.5 py-1 rounded-full font-bold">Dec 02</span>
+                            </div>
+
+                            <!-- Event 3 -->
+                            <div class="flex items-center justify-between p-3.5 rounded-lg bg-white border border-gray-100 hover:border-slate-300 transition-colors shadow-sm">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
+                                        <i class="fa-solid fa-music"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-navy-900">Cultural Gala & Art Fest</h4>
+                                        <p class="text-xs text-gray-500"><i class="fa-solid fa-clock"></i> 11:00 AM | Kupondole Auditorium</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs bg-emerald-500/10 text-emerald-700 px-2.5 py-1 rounded-full font-bold">Dec 20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo & Video Gallery -->
+        <section id="gallery" class="py-16 sm:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-gold-600 font-bold uppercase text-xs tracking-wider">Life at Nightingale</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-1">NIGHTINGALE GALLERY</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base">Glimpses of academic life, sports events, cultural programs, and student activities.</p>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="relative group overflow-hidden rounded-xl h-48 sm:h-64 bg-gray-100 cursor-pointer" onclick="openImageModal('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop" alt="Campus Life" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-gold-400"></i>
+                                <p class="text-xs font-bold">Main Kupondole Campus</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl h-48 sm:h-64 bg-gray-100 cursor-pointer" onclick="openImageModal('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" alt="Classroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-gold-400"></i>
+                                <p class="text-xs font-bold">Interactive Learning Session</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl h-48 sm:h-64 bg-gray-100 cursor-pointer" onclick="openImageModal('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=600&auto=format&fit=crop" alt="Students" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-gold-400"></i>
+                                <p class="text-xs font-bold">Graduation & Award Ceremony</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl h-48 sm:h-64 bg-gray-100 cursor-pointer" onclick="openImageModal('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000')">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop" alt="Sports Day" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-gold-400"></i>
+                                <p class="text-xs font-bold">Annual Sports Meet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials & Reviews -->
+        <section class="py-16 sm:py-20 bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-gold-600 font-bold uppercase text-xs tracking-wider">Testimonials</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-1">What Our Community Says</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-navy-50 p-6 rounded-xl border border-navy-100 relative">
+                        <div class="text-gold-400 text-3xl mb-2"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="text-xs sm:text-sm text-gray-600 mb-6 italic leading-relaxed">
+                            "Nightingale School provided my child with not just strong academic foundation in Block-D, but also boosted her confidence through extracurricular speaking and leadership opportunities."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-navy-900 text-white font-bold flex items-center justify-center text-sm">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-navy-900">Ramesh Karki</h4>
+                                <p class="text-[10px] text-gray-500">Parent of Grade 9 Student</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-navy-50 p-6 rounded-xl border border-navy-100 relative">
+                        <div class="text-gold-400 text-3xl mb-2"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="text-xs sm:text-sm text-gray-600 mb-6 italic leading-relaxed">
+                            "Studying +2 Science here in Kupondole was the best decision for my career. The lab facilities and dedicated faculty helped me clear medical entrance exams with top ranks."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-500 text-navy-900 font-bold flex items-center justify-center text-sm">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-navy-900">Pooja Shrestha</h4>
+                                <p class="text-[10px] text-gray-500">Alumni (+2 Science)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-navy-50 p-6 rounded-xl border border-navy-100 relative">
+                        <div class="text-gold-400 text-3xl mb-2"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="text-xs sm:text-sm text-gray-600 mb-6 italic leading-relaxed">
+                            "The supportive environment and discipline instilled across all blocks helped me excel in my university studies abroad. Truly an institution that builds character."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold flex items-center justify-center text-sm">
+                                SM
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-navy-900">Sunil Maharjan</h4>
+                                <p class="text-[10px] text-gray-500">Alumni & Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission Inquiry & Form Section -->
+        <section id="admissions" class="py-16 sm:py-20 bg-navy-900 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <div>
+                        <span class="text-gold-400 font-bold uppercase text-xs tracking-wider">Join Nightingale Family</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold mt-2 mb-4 leading-tight">
+                            Admissions Open for New Session
+                        </h2>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Take the first step towards a bright future. Fill out the inquiry form to get detailed information about block placements, fee structures, scholarship programs, and entrance exams.
+                        </p>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-gold-400 mt-1"></i>
+                                <div>
+                                    <strong class="text-white block">Merit-Based Scholarships</strong>
+                                    <span class="text-xs text-gray-400">Available for SEE top scorers & outstanding talent in sports/arts.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-gold-400 mt-1"></i>
+                                <div>
+                                    <strong class="text-white block">Block-Specific Mentorship</strong>
+                                    <span class="text-xs text-gray-400">Dedicated block supervisors for individual student progress tracking.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form Card -->
+                    <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                        <h3 class="text-xl font-bold text-navy-900 mb-4 border-b border-gray-100 pb-3">Online Admission Inquiry</h3>
+                        
+                        <form id="admissionForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Student's Full Name *</label>
+                                <input type="text" required placeholder="e.g. Aarav Sharma" class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Applying For Wing/Block *</label>
+                                    <select required class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none bg-white">
+                                        <option value="">Select Wing</option>
+                                        <option value="Block-A">Block-A (Pre-Primary)</option>
+                                        <option value="Block-B/C">Block-B/C (Grade 1-6)</option>
+                                        <option value="Block-D">Block-D (Grade 7-10)</option>
+                                        <option value="+2 Science">+2 Science Stream</option>
+                                        <option value="+2 Management">+2 Management Stream</option>
+                                        <option value="+2 Law">+2 Humanities / Law</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Parent Phone *</label>
+                                    <input type="tel" required placeholder="98XXXXXXXX" class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Email Address</label>
+                                <input type="email" placeholder="parent@example.com" class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Queries / Remarks</label>
+                                <textarea rows="3" placeholder="Any specific queries regarding admissions or block placements..." class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-white font-bold py-3 rounded-lg text-sm shadow transition-all">
+                                Submit Inquiry &rarr;
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us & Location Map -->
+        <section id="contact" class="py-16 sm:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-gold-600 font-bold uppercase text-xs tracking-wider">Get in Touch</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-1">Contact & Visit Us</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto mt-2 text-sm">We welcome parents and prospective students to visit our campus in Kupondole during school hours.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Contact Details Card -->
+                    <div class="bg-navy-50 p-6 rounded-2xl border border-navy-100 space-y-6">
+                        <div>
+                            <h4 class="font-bold text-navy-900 text-lg mb-4 border-b border-navy-200 pb-2">School Address & Desk Contacts</h4>
+                            <div class="space-y-3 text-sm text-gray-700">
+                                <p class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot text-gold-600 mt-1"></i>
+                                    <span><strong>Nightingale Int'l Secondary School</strong><br>Kupondole-10, Lalitpur, Bagmati, Nepal</span>
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <i class="fa-solid fa-phone text-gold-600"></i>
+                                    <span><strong>Main Desk:</strong> +977 01-5523456, 01-5543210</span>
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <i class="fa-solid fa-building text-gold-600"></i>
+                                    <span><strong>Block-D Office:</strong> 01-5451791</span>
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <i class="fa-solid fa-envelope text-gold-600"></i>
+                                    <span>info@nightingale.edu.np</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-navy-900 text-lg mb-4 border-b border-navy-200 pb-2">Office Hours</h4>
+                            <div class="space-y-2 text-xs text-gray-600">
+                                <div class="flex justify-between">
+                                    <span>Sunday - Thursday:</span>
+                                    <span class="font-semibold text-navy-900">8:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Friday:</span>
+                                    <span class="font-semibold text-navy-900">8:00 AM - 2:00 PM</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Saturday & Holidays:</span>
+                                    <span class="font-semibold text-red-600">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Container -->
+                    <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100 min-h-[300px] relative flex flex-col items-center justify-center text-center p-6">
+                        <i class="fa-solid fa-map-location-dot text-5xl text-navy-600 mb-3"></i>
+                        <h4 class="text-lg font-bold text-navy-900 mb-1">Kupondole Campus Location Map</h4>
+                        <p class="text-xs text-gray-500 mb-4 max-w-md">Located conveniently near the Kupondole main road, Lalitpur with easy public transportation access.</p>
+                        <a href="https://maps.google.com" target="_blank" class="bg-navy-900 hover:bg-navy-800 text-white font-semibold px-4 py-2 rounded-lg text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-directions text-gold-400"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-gray-400 text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: About -->
+                <div>
+                    <div class="flex items-center gap-2 text-white font-bold text-lg mb-4">
+                        <div class="w-8 h-8 rounded-full bg-gold-500 text-navy-900 flex items-center justify-center text-xs font-extrabold">NISS</div>
+                        Nightingale Int'l School
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Providing quality education from Montessori to High School (+2) in Kupondole, Lalitpur with commitment to academic excellence and moral leadership.
+                    </p>
+                    <div class="flex gap-3 text-white">
+                        <a href="#" class="w-8 h-8 rounded bg-slate-800 hover:bg-gold-500 hover:text-navy-900 flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-slate-800 hover:bg-gold-500 hover:text-navy-900 flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-slate-800 hover:bg-gold-500 hover:text-navy-900 flex items-center justify-center transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-b border-slate-700 pb-2">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">About Our Institution</a></li>
+                        <li><a href="#blocks" class="hover:text-gold-400 transition-colors">School Wings & Block-D</a></li>
+                        <li><a href="#academics" class="hover:text-gold-400 transition-colors">+2 Science & Management</a></li>
+                        <li><a href="#admissions" class="hover:text-gold-400 transition-colors">Admission Criteria</a></li>
+                        <li><a href="#notices" class="hover:text-gold-400 transition-colors">Academic Calendar & Notices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Programs -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-b border-slate-700 pb-2">Academic Programs</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#academics" class="hover:text-gold-400 transition-colors">Montessori Pre-Primary</a></li>
+                        <li><a href="#academics" class="hover:text-gold-400 transition-colors">Basic Level (Grades 1-6)</a></li>
+                        <li><a href="#academics" class="hover:text-gold-400 transition-colors">Block-D Secondary (Grades 7-10)</a></li>
+                        <li><a href="#academics" class="hover:text-gold-400 transition-colors">+2 Science Stream</a></li>
+                        <li><a href="#academics" class="hover:text-gold-400 transition-colors">+2 Management & Law</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 border-b border-slate-700 pb-2">Stay Updated</h4>
+                    <p class="text-xs text-gray-400 mb-3">Subscribe to receive admission alerts and school newsletters.</p>
+                    <form onsubmit="event.preventDefault(); alert('Subscribed to Nightingale newsletter!');" class="space-y-2">
+                        <input type="email" required placeholder="Enter email address" class="w-full px-3 py-2 text-xs bg-slate-800 text-white rounded border border-slate-700 focus:outline-none focus:border-gold-400">
+                        <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-2 rounded text-xs transition-colors">Subscribe Now</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-2">
+                <p>&copy; 2026 Nightingale International Secondary School. All Rights Reserved.</p>
+                <p>Kupondole, Lalitpur, Nepal</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portal Login Modal -->
+    <div id="portalModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+            <button onclick="closeModal('portalModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="text-xl font-bold text-navy-900 mb-1">Portal Login</h3>
+            <p class="text-xs text-gray-500 mb-6">Access student grades, attendance, and fee status.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Login request received. Authenticating credentials...'); closeModal('portalModal');" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">User ID / Student Code</label>
+                    <input type="text" required placeholder="e.g. NISS-2026-012" class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Password</label>
+                    <input type="password" required placeholder="••••••••" class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none">
+                </div>
+                <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-white font-bold py-2.5 rounded-lg text-sm transition-colors">
+                    Login to Portal
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Prospectus Modal -->
+    <div id="prospectusModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative text-center">
+            <button onclick="closeModal('prospectusModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="w-16 h-16 bg-gold-100 text-gold-600 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-2">Download Prospectus</h3>
+            <p class="text-xs text-gray-600 mb-6">Enter your email address to receive the official Nightingale International Secondary School prospectus PDF.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Prospectus download link sent to your email!'); closeModal('prospectusModal');" class="space-y-4">
+                <input type="email" required placeholder="Enter your email address" class="w-full px-3.5 py-2.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:outline-none">
+                <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-2.5 rounded-lg text-sm transition-colors">
+                    Download PDF
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeModal('imageModal')">
+        <div class="max-w-3xl w-full relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('imageModal')" class="absolute -top-10 right-0 text-white hover:text-gold-400">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="Gallery Preview" class="w-full h-auto rounded-xl shadow-2xl">
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Interactive Tabs Logic
+        function switchTab(tabId) {
+            // Hide all contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Deactivate all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-navy-900', 'text-white', 'shadow');
+                btn.classList.add('text-gray-600');
+            });
+
+            // Show current content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Activate current button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('bg-navy-900', 'text-white', 'shadow');
+            activeBtn.classList.remove('text-gray-600');
+        }
+
+        // Modal Handlers
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        // Image Lightbox
+        function openImageModal(imgSrc) {
+            document.getElementById('lightboxImg').src = imgSrc;
+            openModal('imageModal');
+        }
+
+        // Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your interest! Your admission inquiry has been submitted successfully. Our administrative office in Kupondole will contact you shortly.');
+            document.getElementById('admissionForm').reset();
+        }
+    </script>
+</body>
+</html>
